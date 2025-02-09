@@ -1,0 +1,109 @@
+\documentclass[portuguese,12pt,a4paper,final,titlepage]{book}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{babel}
+\usepackage{url}
+\title{React Native para desenvolvimento mobile}
+\author{André Furlan}
+\begin{document}
+	\maketitle
+	
+	\chapter{Requisitos de software}
+	
+		\par Para iniciar o desenvolvimento em React Native é necessário a instalação de alguns programas, abaixo vai uma lista dos mesmos:
+		\begin{itemize}
+			\item vscode: code.visualstudio.com
+			\item extensões do vscode:
+			\begin{itemize}
+				\item react native tools
+				\item expo tools
+				\item ES7+ React/Redux/React-Native snippets
+				\item vscode-icons (opcional)
+			\end{itemize}
+			\item git: git-scm.com
+			\item nodejs: nodejs.org
+			\item expo go: procure por ``expo go'' na \textit{play store}
+		\end{itemize}
+		
+	\chapter{Criando um projeto}
+		\par Para iniciar um projeto você pode seguir o passo a passo descrito no endereço: https://docs.expo.dev/get-started/create-a-project/ e, baseado nessa documentação,iremos abordar aqui como fazer.
+		
+		\section{Criando a base do projeto}
+			
+			\par Primeiramente, crie um diretório onde \textbf{seus projetos} serão armazenados.
+			
+			\par Em seguida, abra o terminal e navegue até o diretório recém-criado.  
+			
+			\par Feito isso, execute o seguinte comando:  
+			
+			\begin{verbatim}
+				npx create-expo-app ddmi
+			\end{verbatim}
+			
+			\par Após executar o comando, será solicitado um nome para o projeto. Escolha um nome sem caracteres especiais, acentos ou espaços.  
+			
+			\par Ao final do processo, serão sugeridos comandos para rodar a aplicação:  
+			
+			\begin{verbatim}
+				cd projeto01
+				npm run android
+				npm run ios
+				npm run web
+			\end{verbatim}
+			
+			\begin{figure}
+				\centering
+				\includegraphics[width=0.7\linewidth]{../images/screenshot001}
+				\caption{Saída do comando npx create-expo-app@latest}
+				\label{fig:screenshot001}
+			\end{figure}
+			
+			\par Feito isso Abra o diretório que foi criado no vs code: 
+			\par \textit{File >  Open Folder > O caminho  do seu diretório}\newline
+			
+			\par Isso criará um projeto usando as bibliotecas mais atualizadas. No entanto, para garantir a compatibilidade com os códigos feitos em aula, será disponibilizado o arquivo \texttt{package.json}, que lista todas as dependências do projeto.  
+			
+			\par Para instalar essas dependências, entre no diretório do arquivo citado acima e execute o seguinte comando:  
+			
+			\begin{verbatim}
+				npm install
+			\end{verbatim}
+			
+			\par Pronto! Seu projeto foi criado com sucesso. 
+			
+		\section{Configurar o ambiente de execução} 
+			
+			\par O próximo passo é configurar o ambiente de execução onde o sistema rodará. O React Native é capaz de compilar o mesmo projeto para várias plataformas. No entanto, para facilitar o desenvolvimento, utilizaremos a plataforma Expo, que oferece, entre outras funcionalidades, o chamado \textit{hot reload}, permitindo um desenvolvimento mais rápido e sem longas esperas de compilação para diferentes dispositivos.  
+			
+			\par O guia para realizar essa configuração está disponível em:   \url{https://docs.expo.dev/get-started/set-up-your-environment/} 
+			
+			\par Primeiro vá na \textit{play store} e instale o \textit{expo go}:
+			\begin{figure}
+				\centering
+				\includegraphics[width=0.4\linewidth]{../images/expogoQrCode}
+				\caption{\textit{Expo go} na \textit{play store}}
+				\label{fig:expogoqrcode}
+			\end{figure}
+	
+	\chapter{Rodando seu projeto no expo}
+		\par No terminal rode o seguinte comando:
+			\begin{verbatim}
+				npx expo start
+			\end{verbatim}
+			
+	\chapter{Arquivos e diretórios importantes e suas funcionalidades}
+		\begin{itemize}
+			\item \textbf{tsconfig.json} : Um arquivo de configuração usado em projetos TypeScript para definir as opções do seu compilador.
+			\item \textbf{package.json}: Um dos arquivos mais importantes em projetos JavaScript/TypeScript, incluindo projetos React Native. Ele serve como um manifesto do projeto, contendo metadados, dependências, scripts e outras configurações essenciais.
+			\item \textbf{\_layout.tsx} : É uma convenção específica usada em projetos que utilizam o Expo Router ou React Navigation para gerenciar a navegação e a estrutura de layouts em aplicações React Native. Ele é especialmente comum em projetos que seguem a estrutura de roteamento baseado em arquivos (file-based routing), onde a organização das rotas é definida pela estrutura de pastas e arquivos.
+			\item \textbf{(tabs)}: Qualquer diretório cujo nome esteja entre parênteses é um \textbf{grupo}. \textit{(tabs)} é um grupo especial, porém se preciso for é possível criar novos grupos com outros nomes. Cada grupo precisa de seu próprio arquivo ``\_layout.jsx''
+		\end{itemize}
+		
+	\chapter{Crud em tempo de execução}
+	
+	\chapter{Crud com persistência}
+	
+	\chapter{Usando outras fontes}
+	
+	
+\end{document}
