@@ -1,0 +1,56 @@
+# LaTeX auxiliary files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.lof
+*.log
+*.lot
+*.toc
+*.out
+*.gz
+*.toc
+*.synctex.gz
+*.run.xml
+*.fls
+*.fdb_latexmk
+*.nav
+*.snm
+*.vrb
+*.xdv
+
+# latexmk
+latexmkrc
+
+# Intermediate files
+*.dvi
+*.ps
+
+# Build directories (common)
+build/
+out/
+tmp/
+
+# Beamer
+*.nav
+*.snm
+*.vrb
+
+# TikZ externalization
+*.tikz
+*.md5
+tikzexternal/
+
+# Generated PDFs (optional)
+# Uncomment if you don't want to version final PDFs
+# *.pdf
+
+# MacOS metadata
+.DS_Store
+guia2.brf
+guia2.idx
+guia2.ilg
+guia2.ind
+guia2.lol
+guia2.pdf
+guia.pdf

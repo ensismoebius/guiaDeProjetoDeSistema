@@ -1,0 +1,264 @@
+\chapter{Gestão de Continuidade, Evolução do Software e Boas Práticas de Pós-Projeto}
+
+Mesmo após a entrega final, um software bem construído pode (e deve) continuar
+evoluindo. Este capítulo explica como manter, estender, revisar e melhorar o
+projeto após o encerramento do semestre, seguindo práticas adotadas em projetos
+profissionais, porém apresentadas de forma acessível para iniciantes.
+
+A continuidade é um dos fatores que mais diferenciam sistemas amadores de
+sistemas robustos. Quando um time aprende a manter software após a entrega,
+desenvolve maturidade técnica e disciplina.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{1. O Que Significa Evoluir um Software?}
+
+Evoluir um sistema significa:
+
+\begin{itemize}
+	\item corrigir problemas descobertos após o uso;
+	\item adicionar melhorias solicitadas por usuários;
+	\item refatorar partes complexas;
+	\item melhorar desempenho;
+	\item simplificar fluxos confusos;
+	\item adaptar funcionalidades para novos cenários.
+\end{itemize}
+
+Para alunos, essa fase é a oportunidade ideal de:
+
+\begin{itemize}
+	\item reforçar conceitos de engenharia;
+	\item praticar manutenção de código;
+	\item aprender refatoração gradual;
+	\item trabalhar com versões, branches e releases.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{2. Modelos de Evolução Usados na Indústria}
+
+Mesmo iniciantes podem adotar modelos simplificados de evolução:
+
+\subsection*{2.1 Manutenção Corretiva}
+Conserta falhas e bugs encontrados após o uso.
+
+\subsection*{2.2 Manutenção Adaptativa}
+Modifica o sistema para funcionar em novos ambientes, versões de biblioteca ou sistemas operacionais.
+
+\subsection*{2.3 Manutenção Perfectiva}
+Aprimora funções existentes, reorganiza código e melhora desempenho.
+
+\subsection*{2.4 Manutenção Preventiva}
+Evita que erros futuros ocorram, reforçando estrutura e padrões.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{3. Planejamento da Continuidade}
+
+Para continuar um projeto após o semestre, o time deve planejar:
+
+\begin{itemize}
+	\item lista de melhorias desejadas (backlog);
+	\item priorização das tarefas;
+	\item organização dos papéis dos integrantes;
+	\item ciclos curtos de evolução;
+	\item metas mensais claras e realistas.
+\end{itemize}
+
+Mesmo com alunos iniciantes, é possível manter um ritmo saudável:
+
+\begin{itemize}
+	\item 1 melhoria simples por semana;
+	\item 1 revisão de código;
+	\item 1 teste manual completo;
+	\item checkpoints pontuais.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{4. Organização do Repositório Após o Semestre}
+
+Uma boa estrutura facilita a continuidade:
+
+\begin{itemize}
+	\item branches antigas arquivadas;
+	\item documentação atualizada;
+	\item pastas reorganizadas;
+	\item commits limpos e descritivos;
+	\item roteiro de instalação revisado.
+\end{itemize}
+
+Sugestão simples de organização:
+
+\begin{verbatim}
+	main → versão estável
+	dev → desenvolvimento contínuo
+	archive → código antigo
+\end{verbatim}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{5. Ferramentas para Evolução Gradual}
+
+Recursos acessíveis para continuar o desenvolvimento:
+
+\begin{itemize}
+	\item issues para gerenciar novas tarefas;
+	\item milestones para agrupar entregas;
+	\item pull requests para revisão colaborativa;
+	\item tags para marcar versões;
+	\item wiki para documentações recorrentes.
+\end{itemize}
+
+Essas ferramentas são fáceis de usar e treinam disciplina técnica.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{6. Comunicação e Alinhamento do Time}
+
+A evolução eficaz depende de comunicação clara.
+
+Práticas recomendadas:
+
+\begin{itemize}
+	\item reuniões curtas mensais;
+	\item registro formal de decisões;
+	\item documentação viva atualizada;
+	\item comentários claros nas issues.
+\end{itemize}
+
+Erros comuns a evitar:
+
+\begin{itemize}
+	\item assumir que todos sabem o que deve ser feito;
+	\item começar melhorias sem avisar o time;
+	\item misturar código experimental na versão principal.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{7. Obstáculos Comuns na Continuidade}
+
+Ao longo dos anos, observam-se padrões típicos em turmas iniciantes:
+
+\begin{itemize}
+	\item desmotivação pós-semestre;
+	\item dificuldade em entender código próprio;
+	\item falta de documentação histórica;
+	\item branches abandonadas;
+	\item dependências quebradas após atualizações.
+\end{itemize}
+
+A solução é adotar:
+
+\begin{itemize}
+	\item pequenas melhorias;
+	\item revisões periódicas;
+	\item padronização mínima;
+	\item checkpoints simples.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{8. Boas Práticas de Código para Facilitar Evolução}
+
+Equipes iniciantes devem aplicar:
+
+\begin{itemize}
+	\item funções curtas;
+	\item nomes claros de variáveis;
+	\item comentários explicando “por que”, não só “o que”;
+	\item uso consistente de padrões;
+	\item modularização progressiva.
+\end{itemize}
+
+Refatorar não é reescrever: é melhorar aos poucos.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{9. Como Evitar Dívida Técnica}
+
+Dívida técnica ocorre quando decisões rápidas criam problemas futuros.
+
+Para minimizar:
+
+\begin{itemize}
+	\item evitar atalhos temporários;
+	\item revisar código antigo periodicamente;
+	\item corrigir warnings
+	\item remover duplicações;
+	\item documentar o que será melhorado no futuro;
+	\item padronizar lógicas repetidas.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{10. Continuidade Educacional: Transformando o Projeto em Aprendizado}
+
+A evolução pós-projeto permite ao aluno:
+
+\begin{itemize}
+	\item praticar técnicas avançadas;
+	\item melhorar qualidade do portfólio;
+	\item entender engenharia de software de verdade;
+	\item consolidar autonomia técnica.
+\end{itemize}
+
+Sugestões:
+
+\begin{itemize}
+	\item migrar parte do sistema para outra linguagem;
+	\item criar protótipos de novas versões;
+	\item escrever testes automatizados extras;
+	\item convidar colegas de outros semestres para participar.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{11. Estratégias Motivacionais Baseadas em Evidências}
+
+Pesquisas educacionais mostram que alunos mantêm projetos por mais tempo quando:
+
+\begin{itemize}
+	\item sentem orgulho do que construíram;
+	\item tem um propósito além da nota;
+	\item trabalham em grupo pequeno e coeso;
+	\item enxergam melhoria contínua;
+	\item recebem reconhecimento público.
+\end{itemize}
+
+Estratégias práticas:
+
+\begin{itemize}
+	\item publicar releases em redes sociais;
+	\item apresentar melhorias para novas turmas;
+	\item registrar evolução com prints antes/depois;
+	\item manter um changelog simples.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{12. Checklist do Capítulo}
+
+\begin{itemize}
+	\item há backlog organizado para evolução?
+	\item documentação está atualizada?
+	\item versões antigas foram arquivadas?
+	\item bugs não resolvidos estão registrados?
+	\item melhorias estão priorizadas?
+	\item equipe sabe quem faz o quê?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{13. Instruções Passo-a-Passo (Para Leigos)}
+
+\begin{enumerate}
+	\item abra o repositório do projeto.
+	\item liste problemas e melhorias desejadas.
+	\item crie issues para cada item.
+	\item escolha uma melhoria simples.
+	\item crie um branch.
+	\item faça a alteração.
+	\item teste o sistema inteiro.
+	\item registre o que mudou no changelog.
+	\item envie um pull request.
+	\item repita mensalmente.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{14. Encerramento do Capítulo}
+
+A continuidade e evolução são a ponte entre o ambiente acadêmico e o
+profissional.  
+Quando o aluno aprende a manter o que construiu, desenvolve responsabilidade,
+conhecimento duradouro e independência técnica.  
+O projeto não termina na entrega: ele se transforma em oportunidade de
+crescimento contínuo.

@@ -1,0 +1,45 @@
+% CAPA
+% ======= CAPA COM TIKZ (COLE APÓS \begin{document}) =======
+	\begin{titlepage}
+		\centering
+		\begin{tikzpicture}[remember picture,overlay]
+			% background rectangle
+			\fill [black!8] (current page.north west) rectangle (current page.south east);
+			% top wave
+			\path[fill=black!20] (current page.north west) 
+			.. controls ($(current page.north west)+(6cm,-2cm)$) and ($(current page.north east)+(-6cm,-2cm)$) .. (current page.north east)
+			-- (current page.north east |- current page.north) -- cycle;
+			% accent circle
+			\shade[ball color=black!10] ($(current page.center)+(-7cm,4cm)$) circle (2.2cm);
+			% framed band
+			\fill[white] ($(current page.south west)+(2.5cm,8.5cm)$) rectangle ($(current page.south east)+(-2.5cm,11.5cm)$);
+			\draw[line width=1pt] ($(current page.south west)+(2.5cm,8.5cm)$) rectangle ($(current page.south east)+(-2.5cm,11.5cm)$);
+		\end{tikzpicture}
+		
+		\vspace*{2.3cm}
+		{\Huge\bfseries Manual Completo de Projeto de Software\par}
+		\vspace{0.8cm}
+		{\Large \textbf{Para turmas de 20 alunos — 4 meses}}\par
+		\vspace{1.2cm}
+		{\large \textit{Métodos, práticas e roteiro operacional}}\par
+		
+		\vfill
+		
+		\begin{minipage}{0.65\textwidth}
+			\centering
+			{\large Autor: Documentação Acadêmica\par}
+			\vspace{0.4cm}
+			{\small Instituição de Ensino\par}
+			\vspace{0.4cm}
+			{\small \today\par}
+		\end{minipage}
+		
+		\vspace{1.5cm}
+		
+		% small footer with decorative line
+		\begin{tikzpicture}[remember picture,overlay]
+			\draw[line width=0.6pt] ($(current page.south west)+(2.5cm,2.7cm)$) -- ($(current page.south east)+(-2.5cm,2.7cm)$);
+			\node[anchor=south west] at ($(current page.south west)+(2.5cm,2.3cm)$) {\footnotesize Manual pedagógico — versão 1.0};
+		\end{tikzpicture}
+	\end{titlepage}
+	% ======= FIM DA CAPA =======

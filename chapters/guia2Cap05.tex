@@ -1,0 +1,186 @@
+\chapter{Desenvolvimento do MVP}
+O MVP (Produto Mínimo Viável) é a primeira versão funcional do sistema, contendo
+apenas o essencial para demonstrar que as funcionalidades básicas existem e
+funcionam.  
+Esta é a etapa em que o sistema “ganha vida”.  
+Para alunos iniciantes, desenvolver um MVP bem estruturado é a melhor forma de
+aprender a transformar requisitos em código real.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{1. O Que é o MVP e Por Que Ele Importa?}
+
+O MVP é a menor versão utilizável do sistema.  
+Ele contém somente funcionalidades centrais, sem detalhes, sem estética avançada
+e sem otimizações.  
+
+Benefícios para iniciantes:
+
+\begin{itemize}
+	\item reduz ansiedade por não exigir perfeição;
+	\item cria sensação de progresso rápido;
+	\item diminui retrabalho;
+	\item permite testar conceitos antes do sistema completo;
+	\item estabelece um ponto firme para expansões posteriores.
+\end{itemize}
+
+Focar no MVP evita que alunos gastem semanas em detalhes antes de ter algo funcionando.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{2. Seleção das Funcionalidades Essenciais}
+
+Para definir o que entra no MVP:
+
+\begin{enumerate}
+	\item Liste todas as funcionalidades do sistema.
+	\item Marque quais são essenciais para o funcionamento básico.
+	\item Remova tudo que for opcional, decorativo ou avançado.
+	\item Garanta que o MVP possa ser demonstrado em 1–2 minutos.
+\end{enumerate}
+
+Exemplos de funcionalidades essenciais:
+
+\begin{itemize}
+	\item autenticação simples (login);
+	\item cadastro básico de entidades principais;
+	\item listagem de itens;
+	\item operação mínima de criação/edição;
+	\item fluxo funcional de ponta a ponta.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{3. Estrutura Modular para o MVP}
+
+Mesmo o MVP deve ser dividido em módulos pequenos e independentes, como:
+
+\begin{itemize}
+	\item módulo de cadastro;
+	\item módulo de listagem;
+	\item módulo de autenticação;
+	\item módulo de interface inicial;
+	\item módulo de comunicação com o banco.
+\end{itemize}
+
+Para alunos iniciantes, modularidade:
+
+\begin{itemize}
+	\item facilita testes;
+	\item permite que grupos trabalhem em paralelo;
+	\item reduz erros;
+	\item aumenta clareza.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{4. Desenvolvimento Iterativo e Incremental}
+
+O MVP deve ser construído passo a passo:
+
+\begin{enumerate}
+	\item Criar rota simples.
+	\item Fazer endpoint responder algo básico.
+	\item Exibir esse resultado no frontend.
+	\item Salvar algo simples no banco.
+	\item Validar fluxo completo.
+\end{enumerate}
+
+Cada etapa deve funcionar antes de avançar para a próxima.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{5. Primeiro Ciclo de Implementação}
+
+Sugestão prática para iniciar o MVP:
+
+\subsection*{5.1 Backend}
+\begin{itemize}
+	\item Criar rota “/status”.
+	\item Implementar retorno fixo: \texttt{\{"ok": true\}}.
+	\item Criar rota de listagem de uma entidade.
+	\item Retornar dados estáticos.
+\end{itemize}
+
+\subsection*{5.2 Frontend}
+\begin{itemize}
+	\item Criar botão “Testar Conexão”.
+	\item Exibir resposta da rota \texttt{/status}.
+	\item Criar tela simples de listagem.
+	\item Inserir dados fictícios.
+\end{itemize}
+
+\subsection*{5.3 Banco de Dados}
+\begin{itemize}
+	\item Criar tabela mínima.
+	\item Inserir 1 ou 2 registros de teste.
+	\item Ligar rota do backend ao banco.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{6. Segundo Ciclo de Implementação}
+
+Após o primeiro fluxo básico:
+
+\begin{itemize}
+	\item substituir dados falsos por consultas reais;
+	\item implementar inserção básica;
+	\item implementar edição básica;
+	\item validar regras simples (ex.: campos obrigatórios);
+	\item controlar pequenos erros.
+\end{itemize}
+
+Essas evoluções devem ser feitas gradualmente.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{7. Boas Práticas para Iniciantes}
+
+\begin{itemize}
+	\item Comece sempre pelo mais simples.
+	\item Use nomes claros para arquivos e funções.
+	\item Escreva código pequeno, funções curtas.
+	\item Teste cada pequena parte antes de avançar.
+	\item Evite copiar e colar código sem entender.
+	\item Salve progresso com commits frequentes.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{8. Riscos Comuns no Desenvolvimento do MVP}
+
+\begin{itemize}
+	\item tentar fazer funcionalidades avançadas cedo demais;
+	\item criar telas complexas antes de ter lógica funcionando;
+	\item não testar o fluxo completo;
+	\item deixar o banco mal definido;
+	\item acúmulo de código improvisado.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{9. Checklist do Capítulo}
+
+Ao terminar este capítulo, os alunos devem:
+
+\begin{itemize}
+	\item ter um MVP funcional;
+	\item mostrar pelo menos um fluxo completo;
+	\item ter módulos mínimos implementados;
+	\item conseguir demonstrar o sistema em 1–2 minutos;
+	\item saber quais partes serão expandidas depois.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{10. Instruções Passo-a-Passo (Para Leigos)}
+
+\begin{enumerate}
+	\item Liste apenas as funções essenciais.
+	\item Desenhe uma tela simples para cada função.
+	\item Crie uma rota de teste no backend.
+	\item Faça o frontend chamar essa rota.
+	\item Crie uma tabela simples no banco.
+	\item Conecte uma rota real ao banco.
+	\item Teste tudo clicando na interface.
+	\item Repita o ciclo sempre melhorando aos poucos.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{11. Encerramento do Capítulo}
+
+O MVP marca o momento em que o projeto deixa de ser apenas planejamento e passa
+a ser um sistema real, visível e utilizável.  
+Para iniciantes, ele representa um divisor de águas: mostra que é possível
+construir software, reduz medos e fortalece o aprendizado prático.

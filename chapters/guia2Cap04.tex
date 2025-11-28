@@ -1,0 +1,208 @@
+\chapter{Arquitetura e Modelagem}
+A arquitetura define como o sistema será organizado internamente e como suas
+partes irão se comunicar. Já a modelagem transforma ideias abstratas em
+representações visuais e técnicas, que orientam o desenvolvimento.  
+Para iniciantes, esta etapa é essencial para evitar bagunça, retrabalho e
+decisões improvisadas.
+
+Este capítulo propõe uma abordagem clara, acessível e usada em projetos
+profissionais, mas adaptada para estudantes no início da jornada.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{1. O Que é Arquitetura de Software?}
+
+Arquitetura é a estrutura fundamental do sistema: os blocos principais,
+como eles se conectam e como dados circulam entre eles.  
+Sua função é garantir clareza, organização e uma base para o crescimento
+do software.
+
+Benefícios:
+
+\begin{itemize}
+	\item facilita manutenção e evolução;
+	\item evita duplicação de funcionalidades;
+	\item ajuda a encontrar erros mais cedo;
+	\item torna o projeto compreensível para todos.
+\end{itemize}
+
+Sem arquitetura, iniciantes rapidamente criam “código espalhado”, difícil de
+testar e impossível de melhorar.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{2. O Que é Modelagem de Software?}
+
+Modelagem é o processo de criar representações visuais ou textuais do sistema.
+Ela ajuda os alunos a "ver" o que estão construindo antes do código.
+
+Principais modelos:
+
+\begin{itemize}
+	\item Diagrama de Telas.
+	\item Diagrama de Navegação.
+	\item Diagrama Entidade-Relacionamento (ER).
+	\item Diagrama de Componentes.
+	\item Diagrama de Fluxo (Flowchart).
+\end{itemize}
+
+Esses modelos funcionam como um “mapa” de todo o sistema.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{3. Como Definir uma Arquitetura Simples para Iniciantes}
+
+A arquitetura mais adequada para alunos iniciantes é a separação em três camadas:
+
+\begin{itemize}
+	\item \textbf{Frontend}: interface com o usuário.
+	\item \textbf{Backend}: regras de negócio e lógica da aplicação.
+	\item \textbf{Banco de Dados}: armazenamento de informações.
+\end{itemize}
+
+Esse modelo é simples, amplamente usado e funciona em 99\% dos projetos de aula.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{4. Fluxo de Dados Entre as Camadas}
+
+Um fluxo típico:
+
+\begin{enumerate}
+	\item Usuário clica em um botão na interface.
+	\item O frontend envia uma requisição ao backend.
+	\item O backend processa a lógica e valida informações.
+	\item O backend acessa o banco de dados quando necessário.
+	\item O backend devolve uma resposta ao frontend.
+	\item O frontend atualiza a tela com o resultado.
+\end{enumerate}
+
+Com esse fluxo claro, cada aluno sabe onde seu trabalho se encaixa.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{5. Escolha de Tecnologias Simples}
+
+Por se tratar de alunos iniciantes, recomenda-se trabalhar com tecnologias:
+
+\begin{itemize}
+	\item intuitivas;
+	\item com boa documentação;
+	\item com grande comunidade;
+	\item fáceis de testar;
+	\item fáceis de instalar.
+\end{itemize}
+
+Exemplos usuais em projetos didáticos: HTML/CSS/JS, Python, JavaScript no backend, SQLite ou MariaDB.
+
+O objetivo não é complexidade técnica, mas aprendizagem clara.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{6. Modelagem de Dados (Entidades e Atributos)}
+
+Antes de programar, defina as entidades principais.  
+Cada entidade deve representar um conceito do mundo real, como:
+
+\begin{itemize}
+	\item Cliente
+	\item Produto
+	\item Usuário
+	\item Pedido
+	\item Item
+\end{itemize}
+
+Depois, defina os atributos de cada entidade.  
+Exemplo para “Usuário”:
+
+\begin{itemize}
+	\item id\_usuario (chave primária)
+	\item nome
+	\item email
+	\item senha
+	\item data\_cadastro
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{7. Diagramas Recomendados}
+
+Para iniciantes, dois diagramas são mais importantes:
+
+\subsection*{7.1 Diagrama de Telas (Wireframe)}
+Mostra como cada tela será organizada.
+
+\subsection*{7.2 Diagrama ER}
+Mostra as entidades e seus relacionamentos, por exemplo:
+
+\begin{itemize}
+	\item Um cliente pode ter muitos pedidos.
+	\item Um pedido tem vários itens.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{8. Exemplo de Diagrama em TikZ}
+
+A seguir um exemplo compacto de arquitetura:
+
+\begin{tikzpicture}[node distance=2cm, auto]
+	\node[rectangle, draw] (frontend) {Frontend};
+	\node[rectangle, draw, right=of frontend] (api) {Backend / API};
+	\node[rectangle, draw, right=of api] (db) {Banco de Dados};
+	\draw[->] (frontend) -- (api);
+	\draw[->] (api) -- (db);
+\end{tikzpicture}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{9. Padrões de Arquitetura Simples}
+
+Mesmo iniciantes podem usar pequenos padrões:
+
+\begin{itemize}
+	\item divisão em camadas;
+	\item separação de responsabilidades;
+	\item funções pequenas e específicas;
+	\item rotas organizadas;
+	\item nomes claros para variáveis e arquivos.
+\end{itemize}
+
+Não é necessário conhecer padrões complexos como MVC ou microserviços, mas a
+disciplina de organizar o código desde o início faz enorme diferença.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{10. Riscos Arquiteturais Comuns para Iniciantes}
+
+\begin{itemize}
+	\item colocar toda a lógica em um único arquivo;
+	\item misturar HTML com lógica sem organização;
+	\item criar APIs sem padronização de rotas;
+	\item usar nomes genéricos como “teste1.js”, “codigoFinal2.py”.
+\end{itemize}
+
+Prevenir esses erros é papel da arquitetura.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{11. Checklist do Capítulo}
+
+\begin{itemize}
+	\item Todos os alunos entendem a arquitetura geral?
+	\item O sistema foi dividido em camadas?
+	\item Existe ao menos um diagrama de telas?
+	\item Existe um diagrama de entidades?
+	\item As tecnologias foram definidas?
+	\item Os relacionamentos entre componentes estão claros?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{12. Instruções Passo-a-Passo (Para Leigos)}
+
+\begin{enumerate}
+	\item Pegue papel ou abra um arquivo digital.
+	\item Desenhe as telas principais do sistema.
+	\item Liste as entidades e os dados que cada uma deve guardar.
+	\item Conecte as entidades com linhas (relacionamentos).
+	\item Escolha uma tecnologia simples para cada camada.
+	\item Desenhe o fluxo: frontend → backend → banco.
+	\item Revise com o professor antes de iniciar o código.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{13. Encerramento do Capítulo}
+
+A arquitetura orienta todo o projeto, e a modelagem garante que todos tenham a
+mesma visão do sistema. Quando os alunos têm um modelo visual do que será
+construído, o desenvolvimento flui melhor, os erros diminuem e o aprendizado se
+torna mais concreto.

@@ -1,0 +1,247 @@
+\chapter{Comunicação, Colaboração e Governança do Projeto}
+
+Em projetos de software, especialmente quando desenvolvidos por turmas com muitos alunos, a qualidade da comunicação é mais determinante que a qualidade do código.  
+Falhas de comunicação geram retrabalho, atrasos, conflitos, perda de motivação e funcionalidades implementadas de forma incorreta.  
+Por outro lado, comunicação clara, colaboração organizada e governança estruturada transformam grupos iniciantes em equipes capazes de entregar software real.
+
+Este capítulo ensina como organizar o trabalho em equipe, como comunicar-se corretamente e como manter o projeto funcionando de forma ordenada ao longo do semestre.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{1. Fundamentos da Comunicação em Equipes de Software}
+
+Comunicação eficiente envolve:
+
+\begin{itemize}
+	\item clareza na explicação;
+	\item registro escrito das decisões;
+	\item repetição e confirmação do entendimento;
+	\item uso disciplinado de ferramentas (GitHub, listas de tarefas, etc.);
+	\item evitar suposições;
+	\item pedir ajuda ao invés de esconder dúvidas.
+\end{itemize}
+
+Para iniciantes, comunicação clara reduz ansiedade e cria ambiente colaborativo.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{2. Canais de Comunicação Recomendados}
+
+Cada tipo de mensagem deve usar o canal adequado:
+
+\begin{itemize}
+	\item \textbf{GitHub Issues}: tarefas, bugs, solicitações de mudança.
+	\item \textbf{GitHub Commits}: alterações realizadas no código.
+	\item \textbf{Mensagens instantâneas}: dúvidas rápidas e avisos urgentes.
+	\item \textbf{Reuniões presenciais ou on-line}: alinhamentos semanais.
+	\item \textbf{Documentos compartilhados}: decisões importantes e atas.
+\end{itemize}
+
+Regras gerais:
+
+\begin{itemize}
+	\item nunca deixar decisões importantes só em conversa informal;
+	\item tudo que afeta código deve ser registrado em issue ou commit;
+	\item mensagens devem ser objetivas, educadas e informativas.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{3. Como Escrever Mensagens Claras}
+
+Para alunos iniciantes, recomenda-se:
+
+\begin{itemize}
+	\item frase curta e direta;
+	\item evitar termos vagos (“quase pronto”, “tá dando erro”);
+	\item descrever o que tentou fazer;
+	\item adicionar print da tela ou trecho de código relevante;
+	\item listar passos para reproduzir o problema.
+\end{itemize}
+
+Exemplo ruim:
+
+\begin{verbatim}
+	Não funciona aqui.
+\end{verbatim}
+
+Exemplo bom:
+
+\begin{verbatim}
+	Erro ao cadastrar cliente.
+	Passos:
+	1. Abrir tela de cadastro.
+	2. Preencher nome e CPF.
+	3. Clicar "Salvar".
+	
+	Resultado esperado: salvar os dados.
+	Resultado obtido: tela trava e nada é salvo.
+	
+	Commit relacionado: a1b2c3.
+\end{verbatim}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{4. Como Dar e Receber Feedback}
+
+Feedback profissional:
+
+\begin{itemize}
+	\item foca no comportamento, não na pessoa;
+	\item usa exemplos concretos;
+	\item é direto e objetivo;
+	\item oferece caminho de melhoria.
+\end{itemize}
+
+Para iniciantes, o professor deve reforçar que:
+
+\begin{itemize}
+	\item pedir ajuda é sinal de maturidade;
+	\item feedback não é crítica pessoal;
+	\item corrigir rapidamente é mais importante que acertar de primeira.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{5. Colaboração usando Git e GitHub}
+
+Principais práticas:
+
+\begin{itemize}
+	\item criar uma branch por funcionalidade;
+	\item abrir pull requests (PRs) explicando a mudança;
+	\item revisar código do colega antes de aprovar;
+	\item escrever commits com mensagens descritivas;
+	\item sincronizar o código frequentemente.
+\end{itemize}
+
+Para iniciantes:
+
+\begin{itemize}
+	\item usar Pull Request como ferramenta de aprendizado;
+	\item revisar código em dupla;
+	\item evitar commits muito grandes.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{6. Divisão de Papéis no Projeto}
+
+Sugestão de papéis:
+
+\begin{itemize}
+	\item \textbf{Líder Técnico}: organiza o desenvolvimento e integra código.
+	\item \textbf{Gestor de Tarefas}: atualiza quadro Kanban e issues.
+	\item \textbf{Responsáveis por Módulo}: cuidam de funcionalidades específicas.
+	\item \textbf{Documentadores}: atualizam manuais e relatórios.
+	\item \textbf{Testadores}: executam casos de teste.
+\end{itemize}
+
+Os papéis devem:
+
+\begin{itemize}
+	\item ser rotativos;
+	\item evitar concentração de responsabilidade em poucas pessoas;
+	\item ensinar todos a trabalhar em diferentes funções.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{7. Governança: Regras para Manter a Ordem}
+
+Governança é o conjunto de regras que mantém o projeto funcionando bem.
+
+Recomenda-se:
+
+\begin{itemize}
+	\item todas as tarefas devem ter responsável e prazo;
+	\item nada é alterado na \textit{branch main} sem PR aprovado;
+	\item reuniões semanais obrigatórias;
+	\item código deve ser comentado;
+	\item decisões técnicas devem ser documentadas em arquivo próprio;
+	\item conflitos são resolvidos por discussão técnica com dados;
+	\item cada módulo deve ter pelo menos duas pessoas que o conheçam.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{8. Como Resolver Conflitos Técnicos}
+
+Conflitos são naturais e saudáveis quando bem administrados.
+
+Método recomendado:
+
+\begin{enumerate}
+	\item definir o problema com clareza;
+	\item listar soluções possíveis;
+	\item analisar prós e contras objetivamente;
+	\item testar protótipo ou mini-experimento;
+	\item escolher a solução baseada em dado, não em opinião;
+	\item registrar a decisão para referência futura.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{9. Reuniões de Alinhamento}
+
+Sugestão semanal (15–20 min):
+
+\begin{enumerate}
+	\item o que fizemos desde a última reunião;
+	\item problemas encontrados;
+	\item riscos emergentes;
+	\item tarefas para a semana;
+	\item redistribuição de responsabilidades;
+	\item atualizações no quadro Kanban.
+\end{enumerate}
+
+Evitar:
+
+\begin{itemize}
+	\item discussões longas;
+	\item debates pessoais;
+	\item detalhamento excessivo durante a reunião.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{10. Motivação, Engajamento e Clima de Trabalho}
+
+Para uma turma de iniciantes, manter motivação é essencial.
+
+Boas práticas:
+
+\begin{itemize}
+	\item celebrar entregas semanais;
+	\item dividir o trabalho de forma justa;
+	\item ajudar quem está atrasado ao invés de criticar;
+	\item demonstrar progresso visual no Kanban;
+	\item reconhecer esforço individual e coletivo;
+	\item evitar comparações entre alunos.
+\end{itemize}
+
+Clima positivo reduz evasão e aumenta colaboração.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{11. Checklist do Capítulo}
+
+\begin{itemize}
+	\item existem canais claros de comunicação?
+	\item todos sabem como registrar tarefas?
+	\item a equipe usa branches, PRs e revisões?
+	\item reuniões semanais estão acontecendo?
+	\item papéis foram definidos e rotacionados?
+	\item conflitos técnicos são resolvidos de forma profissional?
+	\item decisões estão documentadas?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{12. Instruções Passo-a-Passo (Para Leigos)}
+
+\begin{enumerate}
+	\item Defina onde cada tipo de mensagem será enviada.
+	\item Crie quadro Kanban e distribua tarefas.
+	\item Divida papéis (líder técnico, documentador etc.).
+	\item Combine regras simples de convivência no projeto.
+	\item Registre decisões importantes por escrito.
+	\item Revise código do colega antes de aprovar.
+	\item Faça reuniões curtas toda semana.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{13. Encerramento do Capítulo}
+
+Boa comunicação transforma um grupo disperso em uma equipe real.  
+Boa colaboração transforma alunos iniciantes em desenvolvedores confiantes.  
+Boa governança transforma caos em organização.  
+Com esses princípios, mesmo uma turma grande é capaz de produzir software de qualidade.

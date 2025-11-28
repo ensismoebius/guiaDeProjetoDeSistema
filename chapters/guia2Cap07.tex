@@ -1,0 +1,207 @@
+\chapter{Testes e Controle de Qualidade}
+Garantir a qualidade de um software é parte fundamental do processo de
+desenvolvimento.  
+Testes não servem apenas para "procurar erros", mas para confirmar que o
+sistema está funcionando como deveria e que continuará funcionando conforme
+crescer.  
+Para alunos iniciantes, esta etapa é essencial para aprender boas práticas,
+evitar bugs e ganhar confiança no próprio código.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{1. O Que é Qualidade em Software?}
+
+Qualidade significa que o sistema:
+
+\begin{itemize}
+	\item funciona corretamente;
+	\item é fácil de usar;
+	\item é estável;
+	\item é coerente;
+	\item é seguro;
+	\item é compreensível.
+\end{itemize}
+
+A qualidade não aparece por acaso: é construída com disciplina e testes
+frequentes.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{2. Tipos de Testes Explicados de Forma Simples}
+
+\subsection*{2.1 Testes Manuais}
+O aluno executa o sistema e verifica se a funcionalidade funciona conforme o esperado.
+
+Exemplo:
+\begin{itemize}
+	\item clicar no botão “Salvar” deve salvar o item;
+	\item clicar em “Excluir” deve remover da lista;
+	\item tentar salvar algo sem preencher campos obrigatórios deve dar erro.
+\end{itemize}
+
+\subsection*{2.2 Testes Automatizados}
+São scripts de teste que verificam funcionalidades automaticamente.
+
+Dividem-se em:
+
+\begin{itemize}
+	\item \textbf{Testes unitários}: testam funções isoladas;
+	\item \textbf{Testes de integração}: verificam partes que trabalham juntas;
+	\item \textbf{Testes de ponta a ponta}: simulam todo o fluxo do usuário.
+\end{itemize}
+
+\subsection*{2.3 Testes de Usabilidade}
+Avaliam se o sistema é simples e intuitivo para usuários reais.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{3. Por Que Iniciantes Devem Testar?}
+
+\begin{itemize}
+	\item reduz erros inesperados;
+	\item evita retrabalho;
+	\item melhora a qualidade do código;
+	\item reforça compreensão do funcionamento interno;
+	\item aumenta a confiança no próprio desenvolvimento.
+\end{itemize}
+
+Quanto mais cedo o aluno testa, menos problemas ele encontra no final.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{4. Roteiros de Teste}
+
+Um roteiro de teste é uma lista organizada de itens a serem verificados.
+
+Exemplo simples:
+
+\begin{itemize}
+	\item abrir tela de cadastro;
+	\item inserir dados válidos;
+	\item clicar em salvar;
+	\item verificar se aparece na listagem;
+	\item editar o item;
+	\item excluir o item.
+\end{itemize}
+
+Cada item deve ter:
+
+\begin{itemize}
+	\item ação a realizar;
+	\item resultado esperado;
+	\item resultado obtido.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{5. Boas Práticas de Testes para Iniciantes}
+
+\begin{itemize}
+	\item testar pequenas partes do sistema frequentemente;
+	\item testar cada funcionalidade logo após implementá-la;
+	\item preparar dados simples para facilitar a validação;
+	\item registrar erros encontrados;
+	\item refazer o teste após corrigir o erro;
+	\item revisar com o professor quando necessário.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{6. Testando o Frontend}
+
+Elementos a verificar:
+
+\begin{itemize}
+	\item botões clicam corretamente;
+	\item campos validam dados;
+	\item mensagens de erro são claras;
+	\item o layout não quebra;
+	\item a navegação é intuitiva.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{7. Testando o Backend}
+
+Itens a verificar:
+
+\begin{itemize}
+	\item rotas respondem corretamente;
+	\item validações tratam entradas inválidas;
+	\item dados são gravados corretamente no banco;
+	\item erros são tratados sem travar o sistema;
+	\item respostas têm formato consistente.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{8. Testando o Banco de Dados}
+
+Verificar:
+
+\begin{itemize}
+	\item tabelas criadas corretamente;
+	\item relacionamentos funcionando como o esperado;
+	\item chaves primárias e estrangeiras aplicadas;
+	\item registros válidos e consistentes;
+	\item dados duplicados não sendo aceitos sem controle.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{9. Checklist Completo de Qualidade}
+
+\begin{itemize}
+	\item cada tela testada;
+	\item cada rota verificada;
+	\item banco funcionando sem inconsistências;
+	\item todos os fluxos principais revisados;
+	\item erros reportados e corrigidos;
+	\item sistema estável após correções.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{10. Estratégia Simples de Controle de Qualidade}
+
+Sugestão didática:
+
+\begin{enumerate}
+	\item alunos desenvolvem durante a semana;
+	\item no início da aula seguinte, cada grupo testa o sistema de outro grupo;
+	\item criam lista de problemas encontrados;
+	\item voltam para corrigir seus próprios erros;
+	\item repetem o ciclo.
+\end{enumerate}
+
+Essa estratégia aumenta:
+
+\begin{itemize}
+	\item senso de responsabilidade;
+	\item visão crítica;
+	\item qualidade geral do projeto;
+	\item interação entre os alunos.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{11. Erros Comuns em Testes (e Como Evitar)}
+
+\begin{itemize}
+	\item \textbf{não testar pequenos trechos}: causa acúmulo de erros;
+	\item \textbf{testar apenas “de vez em quando”}: dificulta encontrar causas;
+	\item \textbf{testar apenas o que funciona}: ignora falhas importantes;
+	\item \textbf{não anotar resultados}: dificulta correções futuras;
+	\item \textbf{pressa para “terminar logo”}: leva a problemas maiores depois.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{12. Instruções Passo-a-Passo (Para Leigos)}
+
+\begin{enumerate}
+	\item Abra o sistema e escolha uma funcionalidade.
+	\item Realize cada ação lentamente.
+	\item Observe o que acontece.
+	\item Compare com o que deveria acontecer.
+	\item Anote qualquer diferença.
+	\item Após corrigir, repita o teste.
+	\item Teste mais uma vez para garantir.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{13. Encerramento do Capítulo}
+
+Testar é aprender.  
+Ao testar, o aluno vê claramente como o código funciona na prática, identifica
+erros que não percebia e compreende melhor o sistema como um todo.  
+Um projeto de software só é realmente confiável quando passou por testes
+sistemáticos e controle de qualidade adequado.

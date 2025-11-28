@@ -1,0 +1,235 @@
+\chapter{Testes, Qualidade e Garantia de Funcionamento}
+
+Garantir qualidade é um dos pilares essenciais em qualquer projeto de software.
+Mesmo quando desenvolvido por alunos iniciantes, o sistema deve funcionar de
+forma confiável, previsível e estável.  
+Este capítulo apresenta práticas simples, diretas e eficazes de testes e
+controle de qualidade que podem ser aplicadas sem conhecimento avançado,
+produzindo resultados sólidos em pouco tempo.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{1. O Que São Testes de Software?}
+
+Testar software significa verificar se ele funciona como deveria.
+
+Objetivos dos testes:
+
+\begin{itemize}
+	\item encontrar erros cedo;
+	\item garantir que cada funcionalidade faz o que foi planejado;
+	\item evitar que novos recursos quebrem partes antigas;
+	\item melhorar a confiança no sistema;
+	\item reduzir retrabalho no final do projeto.
+\end{itemize}
+
+Para iniciantes, testar é parte natural do processo de aprender a programar.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{2. Tipos Básicos de Teste}
+
+Os alunos devem praticar ao menos os seguintes tipos:
+
+\subsection*{2.1 Teste Manual}
+O aluno usa a aplicação como se fosse um usuário real e verifica:
+
+\begin{itemize}
+	\item fluxo das telas;
+	\item validação de campos;
+	\item confirmações e alertas;
+	\item erros e travamentos;
+	\item funcionalidades completas do início ao fim.
+\end{itemize}
+
+\subsection*{2.2 Testes de Unidade}
+Testam pequenas partes do código (funções ou métodos).
+Para iniciantes, o professor pode entregar modelos prontos para completar.
+
+\subsection*{2.3 Testes de Integração}
+Checam se módulos diferentes funcionam bem juntos:
+
+\begin{itemize}
+	\item tela + backend;
+	\item backend + banco de dados;
+	\item diferentes partes do sistema acessando a mesma informação.
+\end{itemize}
+
+\subsection*{2.4 Testes de Regressão}
+Garantem que funcionalidades antigas continuam funcionando após novas mudanças.  
+São essenciais ao final do semestre.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{3. Critérios de Qualidade para Iniciantes}
+
+Três critérios são suficientes para projetos do nível da turma:
+
+\subsection*{3.1 Funcionalidade}
+Tudo que foi planejado precisa:
+
+\begin{itemize}
+	\item existir;
+	\item funcionar corretamente;
+	\item ser acessível ao usuário.
+\end{itemize}
+
+\subsection*{3.2 Confiabilidade}
+A aplicação não pode travar, perder dados ou quebrar ao:
+
+\begin{itemize}
+	\item digitar dados incorretos;
+	\item clicar rápido demais;
+	\item repetir ações;
+	\item usar em computadores diferentes.
+\end{itemize}
+
+\subsection*{3.3 Usabilidade}
+O sistema deve ser simples de usar:
+
+\begin{itemize}
+	\item botões claros;
+	\item fluxos intuitivos;
+	\item mensagens compreensíveis;
+	\item sem termos técnicos desnecessários.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{4. Como Criar um Plano de Testes Simples}
+
+Cada grupo deve criar um documento com:
+
+\begin{itemize}
+	\item funcionalidades a serem testadas;
+	\item passos detalhados para executar cada teste;
+	\item resultado esperado;
+	\item resultado obtido;
+	\item prints da tela;
+	\item status (aprovado/reprovado).
+\end{itemize}
+
+Exemplo:
+
+\begin{verbatim}
+	Teste: cadastrar cliente
+	Passos:
+	1. Abrir tela de cadastro.
+	2. Preencher nome, CPF e telefone.
+	3. Clicar "Salvar".
+	
+	Esperado: cliente aparece na lista.
+	Obtido: cliente salvo corretamente.
+	Status: aprovado.
+\end{verbatim}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{5. Registro de Bugs (Bug Report)}
+
+Quando o aluno encontra um erro, deve registrar uma issue contendo:
+
+\begin{itemize}
+	\item descrição clara do problema;
+	\item passos para reproduzir;
+	\item comportamento esperado;
+	\item comportamento observado;
+	\item prints ou erros do console;
+	\item commit onde o erro foi identificado.
+\end{itemize}
+
+Esse modelo evita perda de informação e facilita correção.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{6. Como Priorizar Bugs}
+
+Nem todos os erros são iguais.
+
+\subsection*{6.1 Erros Críticos}
+Travamentos, perda de dados, impossibilidade de usar a aplicação.
+
+\subsection*{6.2 Erros Moderados}
+Funcionalidades importantes com comportamento incorreto.
+
+\subsection*{6.3 Erros Estéticos}
+Problemas de layout, textos incorretos, pequenos desalinhamentos.
+
+A regra geral:
+
+\begin{itemize}
+	\item corrigir primeiro os críticos;
+	\item depois os moderados;
+	\item por último os estéticos.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{7. Ferramentas de Teste Acessíveis a Iniciantes}
+
+Recomenda-se:
+
+\begin{itemize}
+	\item Google Forms para registrar testes manuais da equipe;
+	\item Checklists em Markdown no GitHub;
+	\item Testes automatizados simples com frameworks básicos;
+	\item Prints numerados no relatório final.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{8. Estratégias para Garantia de Funcionamento}
+
+Para manter o sistema estável até a entrega:
+
+\begin{itemize}
+	\item testar toda alteração antes de enviar commit;
+	\item revisar código em dupla;
+	\item usar testes de regressão no final de cada sprint;
+	\item executar sempre a aplicação do início ao fim semanalmente;
+	\item registrar e corrigir bugs imediatamente.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{9. Testes Realizados por Usuários Reais}
+
+Antes da entrega final, cada grupo deve:
+
+\begin{itemize}
+	\item chamar colegas de outra dupla para testar;
+	\item observar como a pessoa usa o sistema;
+	\item não interferir durante o uso;
+	\item registrar dificuldades e confusões;
+	\item corrigir antes da apresentação final.
+\end{itemize}
+
+Testar com outros alunos revela problemas que o próprio grupo não vê.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{10. Checklist do Capítulo}
+
+\begin{itemize}
+	\item as funcionalidades principais foram testadas?
+	\item existem registros dos testes?
+	\item há um documento de bugs?
+	\item os erros críticos foram resolvidos?
+	\item o sistema funciona do início ao fim?
+	\item o grupo testou em computadores diferentes?
+	\item foram feitos testes com usuários reais?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{11. Instruções Passo-a-Passo (Para Leigos)}
+
+\begin{enumerate}
+	\item Abra o sistema.
+	\item Liste tudo que ele deveria fazer.
+	\item Teste cada funcionalidade.
+	\item Anote qualquer problema encontrado.
+	\item Tire prints de tela.
+	\item Marque se o teste passou ou falhou.
+	\item Peça para um colega testar também.
+	\item Corrija os problemas.
+	\item Teste tudo novamente.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{12. Encerramento do Capítulo}
+
+Testes e qualidade transformam o projeto em software confiável.  
+Ao aprender a testar, o aluno aprende a programar melhor, a depurar, a observar
+detalhes, a corrigir erros com calma e a melhorar continuamente.  
+Um projeto bem testado não é apenas mais seguro: é mais profissional, mais
+previsível e mais fácil de apresentar.

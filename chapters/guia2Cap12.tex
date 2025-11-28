@@ -1,0 +1,219 @@
+\chapter{Desenvolvimento Seguro e Boas Práticas de Proteção}
+
+Este capítulo apresenta práticas fundamentais de segurança que podem (e devem)
+ser aplicadas mesmo por equipes iniciantes.  
+Ao contrário do que muitos alunos pensam, segurança não é um tema avançado:
+é um conjunto de hábitos básicos que evitam falhas graves no código e no uso
+do sistema.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{1. Por Que Segurança Importa Mesmo em Projetos Escolares?}
+
+Falhas simples podem causar:
+
+\begin{itemize}
+	\item perda de dados;
+	\item acesso não autorizado;
+	\item travamentos e comportamento inesperado;
+	\item danos à apresentação final;
+	\item impossibilidade de demonstrar o sistema funcionando.
+\end{itemize}
+
+Mesmo um pequeno projeto precisa:
+
+\begin{itemize}
+	\item validar tudo que o usuário digita;
+	\item controlar quem tem acesso a cada parte do sistema;
+	\item impedir que ações indevidas se tornem possíveis.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{2. Princípios Fundamentais de Segurança para Iniciantes}
+
+\subsection*{2.1 Validação de Entrada (Input Validation)}
+Todo dado vindo do usuário é duvidoso até ser validado.
+
+Valide sempre:
+
+\begin{itemize}
+	\item campos de texto;
+	\item números;
+	\item seleções;
+	\item uploads;
+	\item dados vindos da rede.
+\end{itemize}
+
+Exemplos de erros prevenidos:
+
+\begin{itemize}
+	\item dados fora do formato esperado;
+	\item SQL com caracteres inválidos;
+	\item travamentos por strings maiores que o permitido.
+\end{itemize}
+
+\subsection*{2.2 Princípio do Menor Privilégio}
+Cada parte do sistema deve ter permissões apenas para o que realmente precisa.
+
+\begin{itemize}
+	\item usuários comuns não podem acessar páginas administrativas;
+	\item funções simples não devem ter acesso ao banco inteiro;
+	\item arquivos sensíveis não devem ser públicos.
+\end{itemize}
+
+\subsection*{2.3 Proteção de Dados Sensíveis}
+Dados como senhas, identificadores e informações de clientes precisam ser:
+
+\begin{itemize}
+	\item armazenados de forma segura;
+	\item nunca impressos no console;
+	\item nunca enviados em texto puro.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{3. Erros de Segurança Comuns em Projetos de Alunos}
+
+Comportamentos frequentes que devem ser evitados:
+
+\begin{itemize}
+	\item campos sem validação ("deixa assim mesmo");
+	\item mensagens de erro que revelam detalhes técnicos;
+	\item URLs sensíveis sem autenticação;
+	\item senhas fracas hardcoded em arquivos;
+	\item falta de verificação de permissão ao mudar de tela;
+	\item envio de dados sem criptografia;
+	\item campos numéricos aceitando letras.
+\end{itemize}
+
+Cada um desses pontos pode comprometer o sistema completamente.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{4. Como Validar Entrada de Forma Simples e Segura}
+
+Para cada campo:
+
+\begin{itemize}
+	\item verifique se está preenchido;
+	\item confirme o tipo (texto, número, data);
+	\item defina tamanhos mínimos e máximos;
+	\item aplique expressões regulares quando necessário;
+	\item mostre mensagens claras ao usuário.
+\end{itemize}
+
+Exemplo de validação manual:
+
+\begin{verbatim}
+	Se telefone tiver menos que 8 dígitos → erro.
+	Se CPF tiver letras → erro.
+	Se nome tiver números → erro.
+\end{verbatim}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{5. Autenticação e Controle de Acesso em Projetos Simples}
+
+Mesmo projetos pequenos precisam de:
+
+\begin{itemize}
+	\item uma tela de login;
+	\item funções restritas para usuários autenticados;
+	\item níveis diferentes de permissão quando necessário;
+	\item registro automático de tentativas inválidas.
+\end{itemize}
+
+Regras básicas:
+
+\begin{itemize}
+	\item senhas nunca devem ser exibidas;
+	\item após 3 tentativas erradas, exibir mensagem educada;
+	\item logout deve limpar toda sessão do usuário.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{6. Proteção Contra Operações Críticas}
+
+Qualquer ação que altere dados deve solicitar confirmação, como:
+
+\begin{itemize}
+	\item deletar registros;
+	\item editar dados importantes;
+	\item cancelar contratos;
+	\item resetar configurações;
+	\item enviar informações sensíveis.
+\end{itemize}
+
+Exemplo de diálogo:
+
+\begin{verbatim}
+	"Tem certeza que deseja excluir este cliente?"
+	[Sim] [Não]
+\end{verbatim}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{7. Registro e Monitoramento}
+
+Mesmo sistemas pequenos devem registrar:
+
+\begin{itemize}
+	\item logins bem-sucedidos;
+	\item tentativas de login incorretas;
+	\item erros de validação;
+	\item operações críticas (deleções, edições, inserções);
+	\item cenários inesperados.
+\end{itemize}
+
+Isso ajuda a identificar:
+
+\begin{itemize}
+	\item comportamentos estranhos;
+	\item falhas repetitivas;
+	\item alunos que precisam de ajuda;
+	\item funcionalidades usadas com frequência.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{8. Segurança Durante o Desenvolvimento}
+
+Práticas essenciais:
+
+\begin{itemize}
+	\item não usar senhas reais em ambientes de teste;
+	\item não publicar chaves em repositórios públicos;
+	\item não deixar prints de depuração em produção;
+	\item não usar dados confidenciais como exemplo.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{9. Checklist de Segurança do Capítulo}
+
+\begin{itemize}
+	\item todas as entradas têm validação?
+	\item existe controle de acesso por tela?
+	\item operações críticas têm confirmação?
+	\item senhas são mantidas em segurança?
+	\item existe registro de eventos importantes?
+	\item erros exibidos ao usuário não revelam detalhes internos?
+	\item o sistema foi testado por outro colega em busca de falhas?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{10. Instruções Passo-a-Passo (Para Leigos)}
+
+\begin{enumerate}
+	\item Abra cada tela da aplicação.
+	\item Teste campos enviando dados errados de propósito.
+	\item Veja se o sistema detecta o erro.
+	\item Tente acessar telas avançadas sem estar logado.
+	\item Tente excluir algo sem confirmação.
+	\item Verifique se mensagens de erro são claras.
+	\item Peça para um colega tentar “quebrar” o sistema.
+	\item Anote tudo que parecer inseguro.
+	\item Corrija o que for possível.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{11. Encerramento do Capítulo}
+
+Segurança não é uma camada extra: é parte natural do desenvolvimento.
+Aplicar boas práticas desde o início evita falhas graves, aumenta a
+qualidade do software e reduz retrabalho.  
+Alunos que aprendem segurança cedo constroem sistemas mais robustos,
+responsáveis e confiáveis.

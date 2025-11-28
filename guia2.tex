@@ -1,0 +1,43 @@
+% Preamble (document settings and packages)
+\input{chapters/preamble.tex}
+
+% Actual content
+\begin{document}
+
+	\imprimircapa
+	\imprimirfolhaderosto*
+	
+	\pretextual
+	
+	\include{chapters/00-abstract.tex}
+	\include{chapters/05-indexes}
+	
+	% ======= INÍCIO DOS CAPÍTULOS =======
+	\include{chapters/guia2Cap01.tex}
+	\include{chapters/guia2Cap02.tex}
+	\include{chapters/guia2Cap03.tex}
+	\include{chapters/guia2Cap04.tex}
+	\include{chapters/guia2Cap05.tex}
+	\include{chapters/guia2Cap06.tex}
+	\include{chapters/guia2Cap07.tex}
+	\include{chapters/guia2Cap08.tex}
+	\include{chapters/guia2Cap09.tex}
+	\include{chapters/guia2Cap10.tex}
+	\include{chapters/guia2Cap11.tex}
+	\include{chapters/guia2Cap12.tex}
+	\include{chapters/guia2Cap13.tex}
+	\include{chapters/guia2Cap14.tex}
+	\include{chapters/guia2Cap15.tex}
+	
+	\postextual
+	\bibliography{bibliography.bib}
+	
+	\phantompart
+    \appendix % This command usually goes here, to start appendix numbering/styling
+    \include{chapters/appendixA.tex}
+    \include{chapters/appendixB.tex}
+    \include{chapters/appendixC.tex}
+
+	\phantompart
+	\printindex
+\end{document}

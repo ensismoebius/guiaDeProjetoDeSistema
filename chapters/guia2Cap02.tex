@@ -1,0 +1,164 @@
+\chapter{Definição do Problema e Requisitos}
+Este capítulo descreve como transformar uma ideia inicial em um conjunto 
+organizado de requisitos. Esta etapa determina o que será construído, 
+qual é o objetivo do software e quais funcionalidades são realmente 
+necessárias. Para iniciantes, esta é a etapa que mais reduz erros futuros.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{1. O que é “Definir o Problema”?}
+
+Definir o problema significa identificar:
+
+\begin{itemize}
+	\item quem precisa do software;
+	\item o que essa pessoa deseja resolver;
+	\item por que o problema existe;
+	\item qual é a solução esperada;
+	\item com quais limitações o projeto deve conviver.
+\end{itemize}
+
+Para alunos iniciantes, esse passo evita que o projeto vire apenas um conjunto
+desordenado de códigos e funções desconectadas. Uma boa definição do problema
+funciona como um mapa que guia todo o restante do projeto.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{2. Como Identificar o Problema Central}
+
+Todo software existe para resolver um problema real. Os alunos precisam aprender 
+a reconhecer esse problema central. Uma forma simples é responder:
+
+\begin{itemize}
+	\item \textbf{O que está dando errado hoje?}
+	\item \textbf{Quem sofre com isso?}
+	\item \textbf{O que seria uma solução ideal?}
+\end{itemize}
+
+Exemplos didáticos:
+
+\textbf{Problema}: clientes não conseguem acompanhar pedidos.  
+\textbf{Problema}: funcionários não conseguem organizar horários.  
+\textbf{Problema}: dados são perdidos porque não há registro digital.
+
+A clareza na definição evita que o time construía funcionalidades sem propósito.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{3. Tipos de Requisitos}
+
+Os requisitos são divididos em duas categorias principais:
+
+\subsection*{3.1 Requisitos Funcionais (RF)}
+Descrevem \textbf{o que o sistema faz}.  
+São funções, ações, comportamentos observáveis.
+
+Exemplos:
+\begin{itemize}
+	\item RF01: O sistema deve permitir login de usuários.
+	\item RF02: O sistema deve registrar pedidos.
+	\item RF03: O sistema deve gerar relatórios mensais.
+\end{itemize}
+
+\subsection*{3.2 Requisitos Não Funcionais (RNF)}
+Descrevem \textbf{como o sistema deve funcionar}.  
+São regras de qualidade, desempenho, segurança, confiabilidade, etc.
+
+Exemplos:
+\begin{itemize}
+	\item RNF01: O sistema deve responder em menos de 2 segundos.
+	\item RNF02: A interface deve ser acessível para iniciantes.
+	\item RNF03: O sistema deve funcionar em navegadores modernos.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{4. Ferramentas de Apoio à Definição de Requisitos}
+
+Como os alunos estão em início de carreira, é importante usar ferramentas simples, 
+intuitivas e colaborativas.
+
+Ferramentas sugeridas:
+
+\begin{itemize}
+	\item GitHub Issues (para documentar requisitos individualmente);
+	\item Google Forms (para entrevistas e coleta de opiniões);
+	\item Draw.io ou Excalidraw (para modelos de tela simples);
+	\item Google Docs (para rascunhos colaborativos).
+\end{itemize}
+
+O objetivo é que todos os alunos consigam participar e visualizar a evolução 
+dos requisitos, mesmo com pouca prática.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{5. Como Validar se o Requisito Está Claro}
+
+Um requisito bem definido deve:
+
+\begin{itemize}
+	\item ser curto e direto;
+	\item não ter ambiguidade;
+	\item não depender de interpretações;
+	\item ser testável;
+	\item descrever apenas uma função;
+	\item não misturar solução com necessidade.
+\end{itemize}
+
+\textbf{Regra prática}:  
+Se dois alunos lerem o mesmo requisito e concluírem coisas diferentes,  
+o requisito está mal escrito.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{6. Erros Comuns em Definição de Problemas e Requisitos}
+
+\textbf{Erro}: escrever requisitos vagos, como “melhorar desempenho”.  
+\textbf{Correção}: definir valores objetivos (“responder em até 1 segundo”).
+
+\textbf{Erro}: colocar múltiplas funções no mesmo requisito.  
+\textbf{Correção}: criar um requisito por funcionalidade.
+
+\textbf{Erro}: escrever requisitos como tutoriais (“o usuário clica no botão…”)  
+\textbf{Correção}: requisitos descrevem intenção, não passo-a-passo.
+
+\textbf{Erro}: confundir requisito com interface gráfica.  
+\textbf{Correção}: primeiro define-se o que deve existir; depois, como será exibido.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{7. Checklist do Capítulo}
+
+Ao final deste capítulo, os alunos devem conseguir responder:
+
+\begin{itemize}
+	\item Quem é o usuário principal?
+	\item Qual problema ele enfrenta hoje?
+	\item O que seria uma solução satisfatória?
+	\item Quais são os requisitos funcionais essenciais?
+	\item Quais são os requisitos não funcionais obrigatórios?
+	\item Quais requisitos são opcionais?
+\end{itemize}
+
+Se a turma não consegue responder a essas perguntas, o projeto ainda não está pronto para seguir.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{8. Instruções Passo-a-Passo (Para Leigos)}
+
+\begin{enumerate}
+	\item Pegue um caderno ou documento digital.
+	\item Escreva em uma frase simples qual é o problema que o software deve resolver.
+	\item Liste quem será beneficiado pelo software.
+	\item Escreva três problemas que essa pessoa enfrenta hoje.
+	\item Escreva três soluções que resolveriam esses problemas.
+	\item Transforme cada solução em um requisito funcional.
+	\item Escreva três requisitos não funcionais básicos (desempenho, segurança, usabilidade).
+	\item Abra o GitHub.
+	\item Crie uma issue para cada requisito.
+	\item Dê títulos claros, como “RF01 — Cadastro de usuários”.
+	\item Peça para outro colega ler cada requisito e dizer o que entendeu.
+	\item Se houver divergência, reescreva até ficar claro.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{9. Encerramento do Capítulo}
+
+Este capítulo serve como base estrutural do projeto.  
+A clareza na definição do problema e dos requisitos evita desperdício de tempo,
+orienta o planejamento correto e fornece uma visão objetiva do que será
+construído nos próximos capítulos.
+
+Um projeto bem-sucedido começa com requisitos bem definidos.
