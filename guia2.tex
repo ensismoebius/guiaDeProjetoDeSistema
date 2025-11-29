@@ -6,13 +6,11 @@
 
 	\imprimircapa
 	\imprimirfolhaderosto*
-	
 	\pretextual
-	
+
 	\include{chapters/00-abstract.tex}
 	\include{chapters/05-indexes}
-	
-	% ======= INÍCIO DOS CAPÍTULOS =======
+
 	\include{chapters/guia2Cap01.tex}
 	\include{chapters/guia2Cap02.tex}
 	\include{chapters/guia2Cap03.tex}
@@ -30,6 +28,27 @@
 	\include{chapters/guia2Cap15.tex}
 	
 	\postextual
+	\cleardoublepage
+	\pdfbookmark[0]{\listfigurename}{lof}
+	\listoffigures*
+	\cleardoublepage
+	\pdfbookmark[0]{\listtablename}{lot}
+	\listoftables*
+	
+	\cleardoublepage
+	\pdfbookmark[0]{Lista de Siglas}{acronyms}
+	\addcontentsline{toc}{chapter}{Lista de Siglas}
+	\input{chapters/acronym_list_content.tex}
+	
+	\cleardoublepage
+	\pdfbookmark[0]{Glossário}{glossary}
+	\addcontentsline{toc}{chapter}{Glossário}
+	\input{chapters/glossary_content.tex}
+	
+	\cleardoublepage
+	\pdfbookmark[0]{Referências Bibliográficas}{references}
+	\addcontentsline{toc}{chapter}{Referências Bibliográficas}
+	\bibliographystyle{abntex2-alf}
 	\bibliography{bibliography.bib}
 	
 	\phantompart

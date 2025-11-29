@@ -18,6 +18,16 @@
 *.snm
 *.vrb
 *.xdv
+*.brf
+*.idx
+*.ilg
+*.ind
+*.lol
+*.pdf
+*.pdf
+*.acn
+*.glo
+*.ist
 
 # latexmk
 latexmkrc
@@ -43,14 +53,7 @@ tikzexternal/
 
 # Generated PDFs (optional)
 # Uncomment if you don't want to version final PDFs
-# *.pdf
+*.pdf
 
 # MacOS metadata
 .DS_Store
-guia2.brf
-guia2.idx
-guia2.ilg
-guia2.ind
-guia2.lol
-guia2.pdf
-guia.pdf
