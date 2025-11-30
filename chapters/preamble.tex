@@ -3,7 +3,6 @@
 openright,			% 
 oneside,			% Enables one side print
 a4paper,			% Paper size 
-portuguese,			% Main language hyphenation
 french,				% Second language hyphenation
 spanish,			% Third language hyphenation
 brazil,			% Document main language
@@ -177,6 +176,10 @@ twocolumn			% Enables two column parts
 % Document language
 \selectlanguage{brazil}
 
+% Builds the glossaries
+\makenoidxglossaries
+\setabbreviationstyle{short-sc-footnote}
+
 % Builds the index
 \makeindex
 
@@ -189,3 +192,11 @@ twocolumn			% Enables two column parts
 % chapters/data/packages.tex file. If i do, tex raises
 % a "there is no begin(document)" error
 \usepackage{float}
+
+% Add footnote to glossary entries on first use
+\renewcommand*{\glsentryfmt}{%
+	\glsgenentryfmt
+	\ifglsused{\glslabel}{}{%
+		\footnote{\glsentrydesc{\glslabel}}%
+	}%
+}
