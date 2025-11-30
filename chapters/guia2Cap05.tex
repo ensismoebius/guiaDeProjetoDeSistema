@@ -1,15 +1,15 @@
-\chapter{Desenvolvimento do MVP}
-O MVP (Produto Mínimo Viável) é a primeira versão funcional do sistema, contendo
+\chapter{Desenvolvimento do \ac{mvp}}
+O \ac{mvp} (Produto Mínimo Viável) é a primeira versão funcional do sistema, contendo
 apenas o essencial para demonstrar que as funcionalidades básicas existem e
 funcionam.  
 Esta é a etapa em que o sistema “ganha vida”.  
-Para alunos iniciantes, desenvolver um MVP bem estruturado é a melhor forma de
+Para alunos iniciantes, desenvolver um \ac{mvp} bem estruturado é a melhor forma de
 aprender a transformar requisitos em código real.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{1. O Que é o MVP e Por Que Ele Importa?}
+\section*{1. O Que é o \ac{mvp} e Por Que Ele Importa?}
 
-O MVP é a menor versão utilizável do sistema.  
+O \ac{mvp} é a menor versão utilizável do sistema.  
 Ele contém somente funcionalidades centrais, sem detalhes, sem estética avançada
 e sem otimizações.  
 
@@ -23,18 +23,18 @@ Benefícios para iniciantes:
 	\item estabelece um ponto firme para expansões posteriores.
 \end{itemize}
 
-Focar no MVP evita que alunos gastem semanas em detalhes antes de ter algo funcionando.
+Focar no \ac{mvp} evita que alunos gastem semanas em detalhes antes de ter algo funcionando.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{2. Seleção das Funcionalidades Essenciais}
 
-Para definir o que entra no MVP:
+Para definir o que entra no \ac{mvp}:
 
 \begin{enumerate}
 	\item Liste todas as funcionalidades do sistema.
 	\item Marque quais são essenciais para o funcionamento básico.
 	\item Remova tudo que for opcional, decorativo ou avançado.
-	\item Garanta que o MVP possa ser demonstrado em 1–2 minutos.
+	\item Garanta que o \ac{mvp} possa ser demonstrado em 1–2 minutos.
 \end{enumerate}
 
 Exemplos de funcionalidades essenciais:
@@ -48,9 +48,9 @@ Exemplos de funcionalidades essenciais:
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{3. Estrutura Modular para o MVP}
+\section*{3. Estrutura Modular para o \ac{mvp}}
 
-Mesmo o MVP deve ser dividido em módulos pequenos e independentes, como:
+Mesmo o \ac{mvp} deve ser dividido em módulos pequenos e independentes, como:
 
 \begin{itemize}
 	\item módulo de cadastro;
@@ -72,12 +72,12 @@ Para alunos iniciantes, modularidade:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{4. Desenvolvimento Iterativo e Incremental}
 
-O MVP deve ser construído passo a passo:
+O \ac{mvp} deve ser construído passo a passo:
 
 \begin{enumerate}
 	\item Criar rota simples.
-	\item Fazer endpoint responder algo básico.
-	\item Exibir esse resultado no frontend.
+	\item Fazer \gls{endpoint} responder algo básico.
+	\item Exibir esse resultado no \gls{frontend}.
 	\item Salvar algo simples no banco.
 	\item Validar fluxo completo.
 \end{enumerate}
@@ -87,9 +87,9 @@ Cada etapa deve funcionar antes de avançar para a próxima.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{5. Primeiro Ciclo de Implementação}
 
-Sugestão prática para iniciar o MVP:
+Sugestão prática para iniciar o \ac{mvp}:
 
-\subsection*{5.1 Backend}
+\subsection*{5.1 \gls{backend}}
 \begin{itemize}
 	\item Criar rota “/status”.
 	\item Implementar retorno fixo: \texttt{\{"ok": true\}}.
@@ -97,7 +97,7 @@ Sugestão prática para iniciar o MVP:
 	\item Retornar dados estáticos.
 \end{itemize}
 
-\subsection*{5.2 Frontend}
+\subsection*{5.2 \gls{frontend}}
 \begin{itemize}
 	\item Criar botão “Testar Conexão”.
 	\item Exibir resposta da rota \texttt{/status}.
@@ -109,7 +109,7 @@ Sugestão prática para iniciar o MVP:
 \begin{itemize}
 	\item Criar tabela mínima.
 	\item Inserir 1 ou 2 registros de teste.
-	\item Ligar rota do backend ao banco.
+	\item Ligar rota do \gls{backend} ao banco.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -140,7 +140,7 @@ Essas evoluções devem ser feitas gradualmente.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{8. Riscos Comuns no Desenvolvimento do MVP}
+\section*{8. Riscos Comuns no Desenvolvimento do \ac{mvp}}
 
 \begin{itemize}
 	\item tentar fazer funcionalidades avançadas cedo demais;
@@ -156,7 +156,7 @@ Essas evoluções devem ser feitas gradualmente.
 Ao terminar este capítulo, os alunos devem:
 
 \begin{itemize}
-	\item ter um MVP funcional;
+	\item ter um \ac{mvp} funcional;
 	\item mostrar pelo menos um fluxo completo;
 	\item ter módulos mínimos implementados;
 	\item conseguir demonstrar o sistema em 1–2 minutos;
@@ -169,8 +169,8 @@ Ao terminar este capítulo, os alunos devem:
 \begin{enumerate}
 	\item Liste apenas as funções essenciais.
 	\item Desenhe uma tela simples para cada função.
-	\item Crie uma rota de teste no backend.
-	\item Faça o frontend chamar essa rota.
+	\item Crie uma rota de teste no \gls{backend}.
+	\item Faça o \gls{frontend} chamar essa rota.
 	\item Crie uma tabela simples no banco.
 	\item Conecte uma rota real ao banco.
 	\item Teste tudo clicando na interface.
@@ -180,7 +180,7 @@ Ao terminar este capítulo, os alunos devem:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{11. Encerramento do Capítulo}
 
-O MVP marca o momento em que o projeto deixa de ser apenas planejamento e passa
+O \ac{mvp} marca o momento em que o projeto deixa de ser apenas planejamento e passa
 a ser um sistema real, visível e utilizável.  
 Para iniciantes, ele representa um divisor de águas: mostra que é possível
 construir software, reduz medos e fortalece o aprendizado prático.

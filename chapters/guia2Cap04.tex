@@ -52,8 +52,8 @@ Esses modelos funcionam como um “mapa” de todo o sistema.
 A arquitetura mais adequada para alunos iniciantes é a separação em três camadas:
 
 \begin{itemize}
-	\item \textbf{Frontend}: interface com o usuário.
-	\item \textbf{Backend}: regras de negócio e lógica da aplicação.
+	\item \textbf{\gls{frontend}}: interface com o usuário.
+	\item \textbf{\gls{backend}}: regras de negócio e lógica da aplicação.
 	\item \textbf{Banco de Dados}: armazenamento de informações.
 \end{itemize}
 
@@ -66,11 +66,11 @@ Um fluxo típico:
 
 \begin{enumerate}
 	\item Usuário clica em um botão na interface.
-	\item O frontend envia uma requisição ao backend.
-	\item O backend processa a lógica e valida informações.
-	\item O backend acessa o banco de dados quando necessário.
-	\item O backend devolve uma resposta ao frontend.
-	\item O frontend atualiza a tela com o resultado.
+	\item O \gls{frontend} envia uma requisição ao \gls{backend}.
+	\item O \gls{backend} processa a lógica e valida informações.
+	\item O \gls{backend} acessa o banco de dados quando necessário.
+	\item O \gls{backend} devolve uma resposta ao \gls{frontend}.
+	\item O \gls{frontend} atualiza a tela com o resultado.
 \end{enumerate}
 
 Com esse fluxo claro, cada aluno sabe onde seu trabalho se encaixa.
@@ -88,7 +88,7 @@ Por se tratar de alunos iniciantes, recomenda-se trabalhar com tecnologias:
 	\item fáceis de instalar.
 \end{itemize}
 
-Exemplos usuais em projetos didáticos: HTML/CSS/JS, Python, JavaScript no backend, SQLite ou MariaDB.
+Exemplos usuais em projetos didáticos: HTML/CSS/JS, Python, JavaScript no \gls{backend}, SQLite ou MariaDB.
 
 O objetivo não é complexidade técnica, mas aprendizagem clara.
 
@@ -168,7 +168,7 @@ disciplina de organizar o código desde o início faz enorme diferença.
 \begin{itemize}
 	\item colocar toda a lógica em um único arquivo;
 	\item misturar HTML com lógica sem organização;
-	\item criar APIs sem padronização de rotas;
+	\item criar \ac{api}s sem padronização de rotas;
 	\item usar nomes genéricos como “teste1.js”, “codigoFinal2.py”.
 \end{itemize}
 
@@ -195,7 +195,7 @@ Prevenir esses erros é papel da arquitetura.
 	\item Liste as entidades e os dados que cada uma deve guardar.
 	\item Conecte as entidades com linhas (relacionamentos).
 	\item Escolha uma tecnologia simples para cada camada.
-	\item Desenhe o fluxo: frontend → backend → banco.
+	\item Desenhe o fluxo: \gls{frontend} → \gls{backend} → banco.
 	\item Revise com o professor antes de iniciar o código.
 \end{enumerate}
 
